@@ -1,6 +1,6 @@
 var specialArr =['%', '#', '$','^','*','@'];
 var numericArr =['1', '2', '3', '4','5','6','7','8','9','10','11','12'];
-var capitalArr = ["A", "B", "C"];
+var capitalArr = ['A', 'B', 'C','D','E','F','G','H','I', 'J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Y','Z'];
 var lowerArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z'];
 
 //all of the users characters wanted, store together in one big array
@@ -43,7 +43,7 @@ function generatePassword(){
 //asking for users input
   var numericChar = confirm("do you want numbers in your password");
   var upperChar = confirm("do you want upper case letters in your password");
-  var specialChar = confirm("do you want special char in your password");
+  var specialChar = confirm("do you want special characters in your password");
   var lowerArr = confirm("do you want lower case letters in your password");
 //condition to check users input
   if( numericChar === false && upperChar === false && specialChar === false && lowerArr === false){
@@ -68,6 +68,11 @@ if(lowerArr){
 
 
 console.log(usersOptions)
+var password = '';
+for (var i = 0; i < Number(length); i++) {
+  password = password + usersOptions[Math.floor(Math.random() * (usersOptions.length - 1))]
+}
+return password
 
 
 
